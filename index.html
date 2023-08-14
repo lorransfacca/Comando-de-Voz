@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comando de Voz para Ouvir</title>
+</head>
+<style>
+    .oculto
+    {
+        color: white;
+    }
+
+    #startButton
+    {
+        position: absolute;
+        top: 300px;
+    }
+</style>
+<body>
+    <center>
+        <button id="startButton">Ouvir</button>
+    </center>
+
+<div id="content">
+    <p class="oculto">A Univoz foi fundada em 1998, com o objetivo de promover a comunicação humana, integrando a voz da empresa e a de seus coladores para a obtenção da máxima sinergia na comunicação, garantindo resultados profissionais e pessoais.
+
+        Dar voz a valores indispensáveis como a integridade, a ética na conduta profissional, a qualidade, a inovação e o comprometimento com resultados é o que inspira a atuação da empresa, que já foi premiada diversas vezes pela excelência dos serviços
+        
+        Hoje a empresa conta com colaboradores diretos e parceiros com formação na Fonoaudiologia, no Marketing, na Psicologia, na Neurociência, da Educação, na Gestão de Pessoas. Consultores de treinamento, palestrantes e coachs unem sua experiência em favor de uma atuação interdisciplinar integrada prestando serviços em todo o Brasil, garantindo resultados consistentes.</p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const startButton = document.getElementById("startButton");
+    const content = document.getElementById("content");
+
+    startButton.addEventListener("click", () => {
+        const speechText = content.innerText;
+        readText(speechText);
+    });
+
+    function readText(text) {
+        const speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+
+        window.speechSynthesis.speak(speech);
+    }
+});
+</script>
+</body>
+</html>

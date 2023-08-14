@@ -1,0 +1,11 @@
+
+    .oculto
+    {
+        color: white;
+    }
+
+    #startButton
+    {
+        position: absolute;
+        top: 300px;
+    }
