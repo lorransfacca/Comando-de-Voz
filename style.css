@@ -1,11 +1,23 @@
+.oculto
+{
+    color: white;
+}
+        
+#startButton
+{
+    position: absolute;
+    top: 300px;
+    font-size: 30PX;
+    width: 100px; 
+    height: 50px;
+    cursor: pointer;
+}
 
-    .oculto
-    {
-        color: white;
-    }
-
-    #startButton
-    {
-        position: absolute;
-        top: 300px;
-    }
+.logo
+{
+    width: 90px; 
+    height: 40px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+}
